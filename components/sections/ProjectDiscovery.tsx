@@ -45,7 +45,7 @@ export default function ProjectDiscovery() {
   const projectType = watch('projectType')
 
   const onSubmit = (data: FormData) => {
-    console.log('Form submitted:', data)
+    // Handle form submission - integrate with your backend or email service
     setIsSubmitted(true)
     // Here you would typically send this data to your backend
   }
