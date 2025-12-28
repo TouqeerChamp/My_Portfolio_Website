@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: 'Inter', sans-serif;
+    --font-jetbrains: 'JetBrains Mono', monospace;
+  }
+  
+  body {
+    font-family: var(--font-inter);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-jetbrains);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-slate-800;
+  }
+  
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent;
+  }
+  
+  .glass-effect {
+    @apply bg-slate-900/50 backdrop-blur-xl border border-slate-800/50;
+  }
+  
+  .premium-card {
+    @apply glass-effect rounded-2xl p-8 hover:border-slate-700/50 transition-all duration-300;
+  }
+}
+
+/* Typewriter cursor blink animation */
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
