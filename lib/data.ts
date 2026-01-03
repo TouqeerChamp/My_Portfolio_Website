@@ -98,19 +98,19 @@ export const projects: Project[] = [
   },
   {
     id: 6,
-    title: "Interactive Resume/Portfolio",
-    industry: "Personal Branding",
-    description: "Interactive resume showcasing web development milestones and project achievements",
-    challenge: "Creating engaging, interactive resume that stands out while maintaining professionalism",
-    solution: "Developed dynamic portfolio with milestone tracking, interactive elements, and modern design principles",
-    liveUrl: "https://hackathon-milestone-1-2-blush.vercel.app",
-    sourceUrl: "https://github.com/TouqeerChamp/Hackathon-Milestone-1-2",
+    title: "Bindle AI Social App",
+    industry: "Social / AI",
+    description: "A next-generation social platform built with React, featuring a clean UI and interactive user experiences.",
+    challenge: "Designing a realtime, scalable social experience with seamless UI and responsive interactions.",
+    solution: "Implemented a modern React front-end with Tailwind CSS, integrated Firebase services, and added AI-assisted features for smarter interactions.",
+    liveUrl: "https://react-test-my-bindle-app.vercel.app",
+    sourceUrl: "",
     performanceMetric: {
-      label: "Engagement",
-      value: "High"
+      label: "Lighthouse Score",
+      value: "98"
     },
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&q=80",
-    tags: ["Milestones", "Web Dev"]
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80&auto=format&fit=crop",
+    tags: ["React", "Tailwind CSS", "Firebase", "AI Integration"]
   }
 ]
 
