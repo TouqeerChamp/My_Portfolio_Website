@@ -44,7 +44,8 @@ export default function PortfolioGrid() {
         viewport={{ once: true, margin: "-100px" }}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
       >
-        {projects.map((project) => (
+        {projects.map((project) => {
+          return (
           <motion.div
             key={project.id}
             variants={item}
@@ -166,7 +167,7 @@ export default function PortfolioGrid() {
               </div>
             </div>
           </motion.div>
-        ))}
+        )})}
       </motion.div>
 
       {/* Modal for Challenge vs Solution */}

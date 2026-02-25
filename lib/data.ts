@@ -167,7 +167,7 @@ export const projects: Project[] = [
     description: "Latest project featuring real-time document editing and collaboration features.",
     challenge: "Implementing real-time collaboration with multiple users editing simultaneously without conflicts",
     solution: "Built with Next.js and WebSockets for real-time sync, implemented operational transformation for conflict resolution",
-    liveUrl: "https://real-time-collaboration-document-ed.vercel.app/dashboard",
+    liveUrl: "https://real-time-collaboration-document-ed.vercel.app/",
     sourceUrl: "https://github.com/TouqeerChamp/Real-Time-Collaboration-Document-Editor-",
     performanceMetric: {
       label: "Sync Latency",
