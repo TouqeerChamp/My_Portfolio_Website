@@ -29,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-slate-950 text-slate-100`}>
+      <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans`}>
         <Navbar />
         {children}
       </body>
