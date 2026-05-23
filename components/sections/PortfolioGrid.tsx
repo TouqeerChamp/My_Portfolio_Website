@@ -151,7 +151,7 @@ export default function PortfolioGrid() {
               </div>
 
               {/* Live Demo Button (Always Visible) */}
-              <div className="pt-2">
+              <div className="flex gap-3 pt-2">
                 <Button
                   variant="primary"
                   size="sm"
@@ -159,10 +159,18 @@ export default function PortfolioGrid() {
                     e.stopPropagation()
                     window.open(project.liveUrl, '_blank')
                   }}
-                  className="w-full bg-emerald-500/10 hover:bg-emerald-500 text-emerald-400 hover:text-white border border-emerald-500/30 font-semibold"
+                  className="flex-1 bg-emerald-500/10 hover:bg-emerald-500 text-emerald-400 hover:text-white border border-emerald-500/30 font-semibold"
                 >
                   <ExternalLink className="w-4 h-4" />
                   Live Demo
+                </Button>
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  onClick={() => setSelectedProject(project.id)}
+                  className="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 font-semibold"
+                >
+                  View Details
                 </Button>
               </div>
             </div>
@@ -170,14 +178,13 @@ export default function PortfolioGrid() {
         )})}
       </motion.div>
 
-      {/* Modal for Challenge vs Solution */}
+      {/* Modal for Project Details */}
       <Modal isOpen={!!selectedProject} onClose={() => setSelectedProject(null)}>
         {selectedProject && (() => {
           const project = projects.find((p) => p.id === selectedProject)!
           return (
-            <>
-
-              <div className="mb-6">
+            <div className="space-y-8">
+              <div>
                 <div className="flex items-center gap-3 mb-4">
                   <Badge variant="primary">
                     {project.industry}
@@ -186,56 +193,71 @@ export default function PortfolioGrid() {
                     {project.performanceMetric.label}: {project.performanceMetric.value}
                   </Badge>
                 </div>
-                    <h2 className="text-4xl font-bold mb-3">{project.title}</h2>
-                    <p className="text-slate-400">{project.description}</p>
-                  </div>
+                <h2 className="text-4xl font-bold mb-3 text-white" style={{ fontFamily: 'var(--font-jetbrains)' }}>{project.title}</h2>
+                <p className="text-slate-400 text-lg leading-relaxed">{project.description}</p>
+              </div>
 
-                  <div className="grid md:grid-cols-2 gap-6 mb-8">
-                    {/* Challenge */}
-                    <div className="glass-effect p-6 rounded-xl border-red-500/20">
-                      <div className="flex items-center gap-2 mb-4">
-                        <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                        <h3 className="text-xl font-bold text-red-400">Challenge</h3>
-                      </div>
-                      <p className="text-slate-300 leading-relaxed">
-                        {project.challenge}
-                      </p>
-                    </div>
-
-                    {/* Solution */}
-                    <div className="glass-effect p-6 rounded-xl border-green-500/20">
-                      <div className="flex items-center gap-2 mb-4">
-                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                        <h3 className="text-xl font-bold text-green-400">Solution</h3>
-                      </div>
-                      <p className="text-slate-300 leading-relaxed">
-                        {project.solution}
-                      </p>
-                    </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Challenge */}
+                <div className="glass-effect p-6 rounded-xl border-red-500/20">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <h3 className="text-xl font-bold text-red-400">Challenge</h3>
                   </div>
+                  <p className="text-slate-300 leading-relaxed">
+                    {project.challenge}
+                  </p>
+                </div>
 
-                  {/* Technologies */}
-                  <div className="mb-8">
-                    <h3 className="text-lg font-bold mb-3">Technologies Used</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-3 py-2 bg-slate-800/50 border border-slate-700 rounded-lg text-sm text-slate-300"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                {/* Solution */}
+                <div className="glass-effect p-6 rounded-xl border-green-500/20">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <h3 className="text-xl font-bold text-green-400">Solution</h3>
                   </div>
+                  <p className="text-slate-300 leading-relaxed">
+                    {project.solution}
+                  </p>
+                </div>
+              </div>
+
+              {/* Key Features */}
+              {project.features && project.features.length > 0 && (
+                <div className="glass-effect p-6 rounded-xl border-emerald-500/20">
+                  <h3 className="text-xl font-bold mb-4 text-emerald-400">Key Features</h3>
+                  <ul className="grid md:grid-cols-2 gap-3">
+                    {project.features.map((feature, index) => (
+                      <li key={index} className="flex items-start gap-3 text-slate-300">
+                        <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Technologies */}
+              <div>
+                <h3 className="text-lg font-bold mb-4 text-white">Technologies Used</h3>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-4 py-2 bg-slate-800/50 border border-slate-700 rounded-lg text-sm text-slate-300 font-medium"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button
                   variant="primary"
                   size="lg"
                   onClick={() => window.open(project.liveUrl, '_blank')}
-                  className="flex-1"
+                  className="flex-1 bg-emerald-500 hover:bg-emerald-600 text-white font-bold"
                 >
                   <ExternalLink className="w-5 h-5" />
                   Visit Live Demo
@@ -244,13 +266,21 @@ export default function PortfolioGrid() {
                   variant="secondary"
                   size="lg"
                   onClick={() => window.open(project.sourceUrl, '_blank')}
-                  className="flex-1"
+                  className="flex-1 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700"
                 >
                   <Github className="w-5 h-5" />
                   View Source Code
                 </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  onClick={() => setSelectedProject(null)}
+                  className="sm:w-auto px-8"
+                >
+                  Close
+                </Button>
               </div>
-            </>
+            </div>
           )
         })()}
       </Modal>

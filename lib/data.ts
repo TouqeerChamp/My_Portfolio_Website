@@ -5,6 +5,7 @@ export interface Project {
   description: string
   challenge: string
   solution: string
+  features: string[]
   liveUrl: string
   sourceUrl: string
   performanceMetric: {
@@ -23,6 +24,7 @@ export const projects: Project[] = [
     description: "Advanced humanoid robotics system integrated with Physical AI for autonomous task execution and environmental interaction.",
     challenge: "Developing precise motor controls and real-time environmental awareness for complex humanoid movements.",
     solution: "Integrated specialized Physical AI models with RAG-enhanced decision making to allow the humanoid to interact with its surroundings intelligently.",
+    features: ["Physical AI Integration", "RAG-enhanced decision making", "Real-time environmental awareness"],
     liveUrl: "https://hackathon-i-ai-book-rag-chatbot-fro.vercel.app",
     sourceUrl: "https://github.com/MohammadTauqeer/Hackathon-I_AI-Book_RAG-Chatbot.git",
     performanceMetric: {
@@ -39,6 +41,7 @@ export const projects: Project[] = [
     description: "A multi-tier AI Employee system (Bronze to Platinum) that automates professional workflows using Agentic AI.",
     challenge: "Integrating AI Agents with real-world platforms like Gmail, LinkedIn, and Odoo ERP for autonomous task execution.",
     solution: "Built using OpenAI SDK and MCP Servers to handle tiered complexity, from simple email management to full ERP data handling.",
+    features: ["Tiered AI Architecture (Bronze to Platinum)", "Gmail API Integration", "LinkedIn Automation", "Odoo ERP Data Handling"],
     liveUrl: "https://hackathone-0-all-tier.onrender.com",
     sourceUrl: "https://github.com/MohammadTauqeer/Hackathone-0_All_Tier.git",
     performanceMetric: {
@@ -55,6 +58,7 @@ export const projects: Project[] = [
     description: "Interactive AI-powered book with RAG (Retrieval Augmented Generation) chatbot for enhanced learning",
     challenge: "Integrating RAG technology to provide contextual responses based on book content",
     solution: "Built intelligent chatbot using RAG architecture with Python/JavaScript, enabling users to interact with book content",
+    features: [],
     liveUrl: "https://hackathon-i-ai-book-rag-chatbot-fro.vercel.app",
     sourceUrl: "https://github.com/MohammadTauqeer/Hackathon-I_AI-Book_RAG-Chatbot.git",
     performanceMetric: {
@@ -71,6 +75,7 @@ export const projects: Project[] = [
     description: "Dynamic gym website designed to engage fitness enthusiasts and promote services.",
     challenge: "Creating an engaging fitness website that effectively showcases gym facilities and motivates visitors to join",
     solution: "Built a dynamic frontend with Tailwind CSS, implemented smooth animations, and created an intuitive user experience",
+    features: [],
     liveUrl: "https://center-of-gravity-gym.vercel.app/",
     sourceUrl: "https://github.com/MohammadTauqeer/Center-of-Gravity_GYM",
     performanceMetric: {
@@ -87,6 +92,7 @@ export const projects: Project[] = [
     description: "Modern fitness center website showcasing facilities and membership plans.",
     challenge: "Designing a modern, responsive website that effectively displays gym facilities and membership options",
     solution: "Created a responsive React-based design with intuitive navigation and clear membership information",
+    features: [],
     liveUrl: "https://core-karachi-website.vercel.app/",
     sourceUrl: "https://github.com/MohammadTauqeer/Core_Karachi_Website",
     performanceMetric: {
@@ -103,6 +109,7 @@ export const projects: Project[] = [
     description: "A Next.js based platform for job seekers and employers with a clean frontend interface.",
     challenge: "Building a dual-purpose platform serving both job seekers and employers with distinct workflows",
     solution: "Implemented Next.js with TypeScript for type safety, created separate dashboards, and optimized for SEO",
+    features: [],
     liveUrl: "https://job-board-platform-next-js.vercel.app/",
     sourceUrl: "https://github.com/MohammadTauqeer/Job-Board-Platform-Next-js",
     performanceMetric: {
@@ -119,6 +126,7 @@ export const projects: Project[] = [
     description: "Modern storefront built with React and Vite, featuring a smooth shopping experience.",
     challenge: "Creating a fast, modern shopping experience with efficient state management and smooth interactions",
     solution: "Built with React and Vite for optimal performance, implemented cart functionality, and optimized loading times",
+    features: [],
     liveUrl: "https://e-commerce-storefront-7275c.web.app/",
     sourceUrl: "https://github.com/MohammadTauqeer/E-commerce-Storefront-React-Vite-App",
     performanceMetric: {
@@ -135,6 +143,7 @@ export const projects: Project[] = [
     description: "Official institutional website for Karachi Cadet School with a professional layout.",
     challenge: "Creating a professional educational website that serves students, parents, and faculty effectively",
     solution: "Developed with Next.js and Tailwind CSS, implemented SEO optimization, and created clear information architecture",
+    features: [],
     liveUrl: "https://karachi-cadet-school-website.vercel.app/",
     sourceUrl: "https://github.com/MohammadTauqeer/-Karachi_Cadet_School_website",
     performanceMetric: {
@@ -151,6 +160,7 @@ export const projects: Project[] = [
     description: "Efficient task management application developed during a hackathon phase.",
     challenge: "Building a complete task management solution within hackathon time constraints",
     solution: "Rapidly developed with Next.js, focused on core functionality and clean user interface",
+    features: ["Next.js Full-Stack Development", "Responsive UI", "State Management"],
     liveUrl: "https://hackathone-2-todo-app.vercel.app/login",
     sourceUrl: "https://github.com/MohammadTauqeer/Hackathone_2_Todo_App.git",
     performanceMetric: {
@@ -167,6 +177,7 @@ export const projects: Project[] = [
     description: "Keep track of your reading progress and manage your digital library efficiently.",
     challenge: "Creating an intuitive way to track reading progress and manage a personal book library",
     solution: "Built with React and Firebase for real-time data sync, implemented progress tracking and library management",
+    features: [],
     liveUrl: "https://book-reading-tracker-7332f.web.app/",
     sourceUrl: "https://github.com/MohammadTauqeer/Book_Reading_Tracker",
     performanceMetric: {
@@ -183,6 +194,7 @@ export const projects: Project[] = [
     description: "Interactive dashboard for tracking language learning milestones and progress.",
     challenge: "Designing an engaging dashboard that motivates learners and clearly displays progress",
     solution: "Created interactive visualizations with React, implemented state management for progress tracking",
+    features: [],
     liveUrl: "https://language-learning-dashbo-65278.web.app/",
     sourceUrl: "https://github.com/MohammadTauqeer/Language-Learning-Dashboard",
     performanceMetric: {
@@ -199,6 +211,7 @@ export const projects: Project[] = [
     description: "A smart application to organize study schedules and academic tasks.",
     challenge: "Helping students manage complex study schedules and deadlines effectively",
     solution: "Built with React and Firebase, implemented smart scheduling, reminders, and task prioritization",
+    features: [],
     liveUrl: "https://study-planner-app-b4614.web.app/login",
     sourceUrl: "https://github.com/MohammadTauqeer/Study-Planner-app-git",
     performanceMetric: {
@@ -215,6 +228,7 @@ export const projects: Project[] = [
     description: "Latest project featuring real-time document editing and collaboration features.",
     challenge: "Implementing real-time collaboration with multiple users editing simultaneously without conflicts",
     solution: "Built with Next.js and WebSockets for real-time sync, implemented operational transformation for conflict resolution",
+    features: [],
     liveUrl: "https://real-time-collaboration-document-ed.vercel.app/",
     sourceUrl: "https://github.com/MohammadTauqeer/Real-Time-Collaboration-Document-Editor-",
     performanceMetric: {
@@ -231,6 +245,7 @@ export const projects: Project[] = [
     description: "A next-generation social platform built with React, featuring a clean UI and interactive user experiences.",
     challenge: "Designing a realtime, scalable social experience with seamless UI and responsive interactions.",
     solution: "Implemented a modern React front-end with Tailwind CSS, integrated Firebase services, and added AI-assisted features for smarter interactions.",
+    features: [],
     liveUrl: "https://react-test-my-bindle-app.vercel.app",
     sourceUrl: "https://github.com/MohammadTauqeer/Bindle_AI_Social_App",
     performanceMetric: {
@@ -247,6 +262,7 @@ export const projects: Project[] = [
     description: "A premium electronics store with a sleek dark UI, category filtering, and a modern shopping experience",
     challenge: "Creating an immersive shopping experience with advanced filtering and seamless navigation",
     solution: "Built modern e-commerce platform with Headless UI components, category filtering, and optimized product browsing",
+    features: [],
     liveUrl: "https://tech-volt-electronics-e-commerce.vercel.app",
     sourceUrl: "https://github.com/MohammadTauqeer/tech-volt-electronics-e-commerce",
     performanceMetric: {
@@ -263,6 +279,7 @@ export const projects: Project[] = [
     description: "Full-featured online shopping platform with cart management and product catalog",
     challenge: "Building a responsive e-commerce experience with dynamic shopping cart and seamless checkout flow",
     solution: "Implemented Next.js with Tailwind CSS for styling, created reusable components, and integrated shopping cart functionality",
+    features: [],
     liveUrl: "https://next-js-e-commerce-website-livid.vercel.app",
     sourceUrl: "https://github.com/MohammadTauqeer/Next.js-E-commerce-Website",
     performanceMetric: {
@@ -279,6 +296,7 @@ export const projects: Project[] = [
     description: "Dynamic product catalog with advanced sorting and API integration for hackathon project",
     challenge: "Implementing efficient product filtering, sorting, and API data management within tight deadline",
     solution: "Built scalable Next.js application with API routes, implemented advanced sorting algorithms and optimized data fetching",
+    features: [],
     liveUrl: "https://hackathon-3-q2-final-2025.vercel.app/product",
     sourceUrl: "https://github.com/MohammadTauqeer/hackathon-3-q2-final-2025",
     performanceMetric: {
@@ -295,6 +313,7 @@ export const projects: Project[] = [
     description: "User-friendly loan application interface with modern UI/UX design principles",
     challenge: "Creating an intuitive interface for complex financial forms while maintaining user trust",
     solution: "Designed clean, accessible UI with React, focusing on user experience and responsive design patterns",
+    features: [],
     liveUrl: "https://easy-loan-templates.vercel.app",
     sourceUrl: "https://github.com/MohammadTauqeer/easy-loan-templates",
     performanceMetric: {
