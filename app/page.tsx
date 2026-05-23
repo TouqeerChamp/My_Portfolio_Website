@@ -19,15 +19,9 @@ export default function Home() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="fixed inset-0 z-[100] flex items-center justify-center overflow-hidden bg-slate-950"
+          className="fixed inset-0 z-[999] flex items-center justify-center w-full h-screen min-h-[100dvh] bg-cover bg-center bg-no-repeat overflow-hidden"
+          style={{ backgroundImage: 'url(/intro-bg.png)' }}
         >
-          {/* Background Image */}
-          <img
-            src="/intro-bg.png"
-            alt="Intro Background"
-            className="absolute inset-0 w-full h-full object-cover fixed"
-          />
-          
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black/50" />
 
