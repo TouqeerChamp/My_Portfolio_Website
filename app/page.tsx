@@ -26,7 +26,7 @@ export default function Home() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="fixed inset-0 w-full h-screen bg-center bg-no-repeat bg-contain bg-black z-[999] overflow-hidden"
+          className="fixed inset-0 w-screen h-screen m-0 p-0 bg-center bg-no-repeat bg-cover bg-slate-950 z-[999] overflow-hidden"
           style={{ backgroundImage: 'url(/intro-bg.png)' }}
         >
           <button
