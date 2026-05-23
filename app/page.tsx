@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Hero from '@/components/sections/Hero'
 import AboutExperience from '@/components/sections/AboutExperience'
@@ -11,6 +11,13 @@ import ProjectDiscovery from '@/components/sections/ProjectDiscovery'
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true)
 
+  useEffect(() => {
+    // Automatically skip intro on mobile devices
+    if (window.innerWidth < 768) {
+      setShowIntro(false)
+    }
+  }, [])
+
   return (
     <AnimatePresence mode="wait">
       {showIntro ? (
@@ -19,14 +26,17 @@ export default function Home() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="fixed inset-0 z-[999] flex items-center justify-center w-full h-screen min-h-[100dvh] bg-cover bg-center bg-no-repeat overflow-hidden"
+          className="fixed inset-0 z-[999] flex items-start justify-center w-full h-screen min-h-[100dvh] bg-cover bg-center bg-no-repeat overflow-hidden"
           style={{ backgroundImage: 'url(/intro-bg.png)' }}
         >
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black/50" />
 
-          {/* Button Container */}
-          <div className="relative z-10">
+          {/* Main Container */}
+          <div className="relative z-10 flex flex-col items-center pt-32 md:pt-40 px-4">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-12 text-center tracking-[0.1em] drop-shadow-2xl">
+              AGENTIC AI & NEXT.JS DEVELOPER
+            </h1>
             <button
               onClick={() => setShowIntro(false)}
               className="px-12 py-5 text-2xl md:text-3xl font-bold tracking-[0.2em] text-emerald-400 uppercase transition-all duration-500 border-2 rounded-full border-emerald-500/50 bg-black/40 backdrop-blur-md hover:bg-emerald-500/10 hover:border-emerald-500 hover:text-emerald-300 hover:shadow-[0_0_50px_rgba(16,185,129,0.4)] group"
