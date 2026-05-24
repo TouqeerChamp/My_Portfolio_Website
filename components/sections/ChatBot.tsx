@@ -13,7 +13,7 @@ interface Message {
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState<Message[]>([
-    { id: 1, text: "Hi! How can I help you today?", sender: 'bot' }
+    { id: 1, text: "Hi! I'm Tauqeer's AI agent. How can I help you today?", sender: 'bot' }
   ])
   const [inputValue, setInputValue] = useState('')
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -40,7 +40,7 @@ export default function ChatBot() {
     setTimeout(() => {
       const botResponse: Message = {
         id: Date.now() + 1,
-        text: "Thanks for reaching out! I'm a demo bot, but Mohammad will get back to you soon.",
+        text: "I'm a Tauqeer Agent, but Mohammad Tauqeer will get back to you soon.",
         sender: 'bot'
       }
       setMessages(prev => [...prev, botResponse])
