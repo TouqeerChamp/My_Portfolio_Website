@@ -223,14 +223,11 @@ export default function PortfolioGrid() {
 
               {/* Key Features */}
               {project.features && project.features.length > 0 && (
-                <div className="glass-effect p-6 rounded-xl border-emerald-500/20">
-                  <h3 className="text-xl font-bold mb-4 text-emerald-400">Key Features</h3>
-                  <ul className="grid md:grid-cols-2 gap-3">
+                <div>
+                  <h3 className="text-xl font-bold text-emerald-400 mb-4">Key Features</h3>
+                  <ul className="list-disc list-inside text-slate-300 space-y-2">
                     {project.features.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-3 text-slate-300">
-                        <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-500 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
+                      <li key={index}>{feature}</li>
                     ))}
                   </ul>
                 </div>
@@ -243,7 +240,7 @@ export default function PortfolioGrid() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-4 py-2 bg-slate-800/50 border border-slate-700 rounded-lg text-sm text-slate-300 font-medium"
+                      className="px-3 py-1 bg-slate-800/50 border border-emerald-500/20 rounded-md text-xs text-emerald-400"
                     >
                       {tag}
                     </span>
