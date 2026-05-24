@@ -269,7 +269,7 @@ export default function PortfolioGrid() {
                   View Source Code
                 </Button>
                 <Button
-                  variant="outline"
+                  variant="secondary"
                   size="lg"
                   onClick={() => setSelectedProject(null)}
                   className="sm:w-auto px-8"
