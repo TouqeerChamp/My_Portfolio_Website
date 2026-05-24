@@ -5,6 +5,7 @@ import AboutExperience from '@/components/sections/AboutExperience'
 import PortfolioGrid from '@/components/sections/PortfolioGrid'
 import Skills from '@/components/sections/Skills'
 import ProjectDiscovery from '@/components/sections/ProjectDiscovery'
+import ChatBot from '@/components/sections/ChatBot'
 
 export default function Home() {
   return (
@@ -98,6 +99,8 @@ export default function Home() {
       <footer className="py-12 px-4 border-t border-slate-800/50 text-center text-slate-400">
         <p>© 2026 My Portfolio. Created by Mohammad Tauqeer. All Rights Reserved.</p>
       </footer>
+
+      <ChatBot />
     </main>
   )
 }
