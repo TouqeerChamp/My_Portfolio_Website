@@ -18,8 +18,30 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Premium Portfolio - Full Stack Developer',
-  description: 'A premium portfolio showcasing world-class web development projects',
+  title: "Mohammad Tauqeer | Full-Stack & Agentic AI Developer",
+  description: "Portfolio of Mohammad Tauqeer, a professional software engineer based in Karachi specializing in Agentic AI, multi-agent frameworks, Next.js, and FastAPI.",
+  openGraph: {
+    title: "Mohammad Tauqeer | Full-Stack & Agentic AI Developer",
+    description: "Explore my work in Agentic AI, Next.js, and Full-Stack Development.",
+    url: "https://mohammad-touqeer-portfolio.vercel.app/", // Current live URL
+    siteName: "Mohammad Tauqeer Portfolio",
+    images: [
+      {
+        url: "/portfolio-preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Mohammad Tauqeer Portfolio Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mohammad Tauqeer | Full-Stack & Agentic AI Developer",
+    description: "Explore my work in Agentic AI and Full-Stack Development.",
+    images: ["/portfolio-preview.png"],
+  },
 }
 
 export default function RootLayout({
